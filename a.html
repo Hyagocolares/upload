@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Bootstrap responsivo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <script src="src/js/navbar.js"></script>
+    <script src="/src/js/site.js" data-domain="datatables.net"
+        data-api="https://plausible.sprymedia.co.uk/api/event"></script>
+</head>
+
+<body>
+    <nav id="sidebar" class="active">
+        <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn las la-angle-left">
+            </button>
+        </div>
+
+        <div class="img bg-wrap text-center py-4"
+            style="background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.explicit.bing.net%2Fth%3Fid%3DOIP.q7UKJduuW27t4dXiG77zYgHaE8%26pid%3DApi&f=1&ipt=04a0634c6661524c8ac3e3329c89e145b9f4e472f914624de41c801f8afd1769&ipo=images);">
+            <div class="user-logo">
+                <div class="img" style="background-image: url(/src/img/foto\ de\ perfil.jpeg);"></div>
+                <h2 class="h2"><strong>Hyago Colares</strong></h2>
+                <h3>Fisioterapeuta</h3>
+            </div>
+        </div>
+
+        <ul class="list-unstyled components mb-5">
+            <li>
+                <a href="home.html"><span class="mr-3 las la-home"></span> Home</a>
+            </li>
+            <li>
+                <a href="paciente.html"><span class="mr-3 las la-user"></span> Paciente</a>
+            </li>
+            <li>
+                <a href="tratamento.html"><span class="mr-3 la la-notes-medical"></span> Tratamento</a>
+            </li>
+            <li class="active">
+                <a href="relatorio.html"><span class="mr-3 la la-chart-pie"></span> Relatorio</a>
+            </li>
+            <li>
+                <a href="configuracao.html"><span class="mr-3 la la-cog"></span> Configurações</a>
+            </li>
+            <li>
+                <a href="ajuda.html"><span class="mr-3 la la-info-circle"></span> Ajuda</a>
+            </li>
+            <li>
+                <a href="#"><span class="mr-3 la la-sign-out-alt"></span> log-off</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid" id="conteudoPDF">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center mb-2">Relatório Gráfico Tratamentos</h1>
+                        <p class="text-center">Este é o relatório de como estão indo as avaliações dos tratamentos em
+                            geral</p>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5 col-md-6 col-sm-12">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center mb-2">Relatório Gráfico Financeiro</h1>
+                        <p class="text-center">Este é o relatório de como estão indo os pagamentos em geral</p>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5 col-md-6 col-sm-12">
+                                <canvas id="myChar"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center mb-2">Relatório de Pagamentos</h1>
+                        <p class="text-center">Este é o relatório de como estão indo os pagamentos em geral</p>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="text=" text-center">Nome</th>
+                                        <th class="text-center">Tratamento</th>
+                                        <th class="text-center">Pagamento</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hyago</td>
+                                        <td>10</td>
+                                        <td>R$ 150,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alan</td>
+                                        <td>7</td>
+                                        <td>R$ 350,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Livia</td>
+                                        <td>4</td>
+                                        <td>R$ 400,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashaphe</td>
+                                        <td>6</td>
+                                        <td>R$ 70,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="text-center mb-2">Gráfico de Pagamentos</h1>
+                        <p class="text-center">Este é o gráfico de como estão indo os pagamentos em geral</p>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                                <canvas id="myChart1"></canvas>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <canvas id="myChart2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // Gráfico de pagamentos por mês
+        var ctx1 = document.getElementById("myChart1").getContext("2d");
+        var myChart1 = new Chart(ctx1, {
+            type: "line",
+            data: {
+                labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho"],
+                datasets: [{
+                    label: "Pagamentos",
+                    data: [300, 450, 700, 550, 600, 800],
+                    backgroundColor: [
+                        "rgba(255, 99, 132, 0.2)",
+                    ],
+                    borderColor: [
+                        "rgba(255, 99, 132, 1)",
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        // Gráfico de pagamentos por tratamento
+        var ctx2 = document.getElementById("myChart2").getContext("2d");
+        var myChart2 = new Chart(ctx2, {
+            type: "doughnut",
+            data: {
+                labels: ["Tratamento 1", "Tratamento 2", "Tratamento 3"],
+                datasets: [{
+                    label: "Pagamentos",
+                    data: [250, 150, 500],
+                    backgroundColor: [
+                        "rgba(255, 99, 132, 0.2)",
+                        "rgba(54, 162, 235, 0.2)",
+                        "rgba(255, 206, 86, 0.2)"
+                    ],
+                    borderColor: [
+                        "rgba(255, 99, 132, 1)",
+                        "rgba(54, 162, 235, 1)",
+                        "rgba(255, 206, 86, 1)"
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

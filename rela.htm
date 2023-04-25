@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Inicial</title>
+    <!-- Custom CSS -->
+    <link rel="shortcut icon" type="image/png" href="/src/img/th-1373895706-removebg-preview.png">
+    <link rel="stylesheet" href="/src/css/site.css">
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- CSS na pratica -->
+    <style>
+        .h2 {
+            color: white;
+        }
+
+        /* Estilos CSS */
+        .chart-container {
+            width: 50%;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        div.fw-container div.fw-body div.content {
+            margin-top: 5em;
+        }
+
+        div.fw-body h1 {
+            display: none;
+        }
+
+        div.fw-container {
+            z-index: 1;
+        }
+    </style>
+    <!-- Incluindo o JS -->
+    <script src="/src/js/dynamic.php"></script>
+    <script src="/src/js/site.js" data-domain="datatables.net"
+        data-api="https://plausible.sprymedia.co.uk/api/event"></script>
+    <script src="/src/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script defer="" async="" src="https://media.ethicalads.io/media/client/ethicalads.min.js" onload="window.dtAds()"
+        onerror="window.dtAds()"></script>
+    <!-- JS na pratica -->
+    <script>
+        $(document).ready(function () {
+            $('#example')
+                .addClass('nowrap')
+                .dataTable({
+                    responsive: true,
+                    autoWidth: false,
+                    columnDefs: [
+
+                    ]
+                });
+
+            var browser = $('button[data-tab="tab-browser"]');
+            var npm = $('button[data-tab="tab-npm"]');
+
+            browser.on('click', function () {
+                $('div.tab-browser').css('display', 'block');
+                $('div.tab-npm').css('display', 'none');
+
+                browser.addClass('active');
+                npm.removeClass('active');
+            });
+
+            npm.on('click', function () {
+                $('div.tab-browser').css('display', 'none');
+                $('div.tab-npm').css('display', 'block');
+
+                browser.removeClass('active');
+                npm.addClass('active');
+            });
+        });
+    </script>
+</head>
+
+<body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+            integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+            crossorigin="anonymous"></script>
+        <div class="main wrapper d-flex align-items-stretch ">
+            <nav id="sidebar" class="active">
+                <div class="custom-menu">
+                    <button type="button" id="sidebarCollapse" class="btn las la-angle-left">
+                    </button>
+                </div>
+
+                <div class="img bg-wrap text-center py-4"
+                    style="background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.explicit.bing.net%2Fth%3Fid%3DOIP.q7UKJduuW27t4dXiG77zYgHaE8%26pid%3DApi&f=1&ipt=04a0634c6661524c8ac3e3329c89e145b9f4e472f914624de41c801f8afd1769&ipo=images);">
+                    <div class="user-logo">
+                        <div class="img" style="background-image: url(/src/img/foto\ de\ perfil.jpeg);"></div>
+                        <h2 class="h2"><strong>Hyago Colares</strong></h2>
+                        <h3>Fisioterapeuta</h3>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="home.html"><span class="mr-3 las la-home"></span> Home</a>
+                    </li>
+                    <li>
+                        <a href="paciente.html"><span class="mr-3 las la-user"></span> Paciente</a>
+                    </li>
+                    <li>
+                        <a href="tratamento.html"><span class="mr-3 la la-notes-medical"></span> Tratamento</a>
+                    </li>
+                    <li class="active">
+                        <a href="relatorio.html"><span class="mr-3 la la-chart-pie"></span> Relatorio</a>
+                    </li>
+                    <li>
+                        <a href="configuracao.html"><span class="mr-3 la la-cog"></span> Configurações</a>
+                    </li>
+                    <li>
+                        <a href="ajuda.html"><span class="mr-3 la la-info-circle"></span> Ajuda</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="mr-3 la la-sign-out-alt"></span> log-off</a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="conteudoPDF" class="container d-flex flex-column overflow-auto estender wrapper">
+                <!-- Adicionando um container para centralizar o conteúdo -->
+                <div class="d-flex flex-wrap">
+                    <div class="mt-2 p-2 col-md-6">
+                        <h1 class="text-center mb-2">Relatório Gráfico Tratamentos</h1>
+                        <P class="text-center">Este é o relatorio de como esta indo as avaliaçoes dos tratamentos em
+                            geral
+                        </P>
+                        <!-- Adicionando uma div para o gráfico de pizza -->
+                        <div class="row justify-content-center">
+                            <div class="col-md-5">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adicionando um container para centralizar o conteúdo -->
+                    <div class="mt-2 p-2 col-md-6">
+                        <h1 class="text-center mb-2">Relatório Gráfico Financeiro</h1>
+                        <P class="text-center">Este é o relatorio de como esta indo os pagamentos em geral</P>
+                        <!-- Adicionando uma div para o gráfico de pizza -->
+                        <div class="row justify-content-center">
+                            <div class="col-md-5">
+                                <canvas id="myChar"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inicio da tabela-->
+                <div class="unit w-2-3 p-2 m-5" id="conteudoPDF1">
+                    <div class="hero-callout border border-dark p-1">
+                        <div id="example_wrapper" class="dataTables_wrapper border">
+                            <table id="example" class="display nowrap dataTable dtr-inline collapsed"
+                                style="width: 100%;" aria-describedby="example_info">
+                                <thead>
+                                    <tr>
+                                        <th class="sorting sorting_asc" tabindex="0" aria-controls="example" rowspan="1"
+                                            colspan="1" style="width: 124px;">Nome
+                                        </th>
+
+                                        <th class="dt-body-right sorting" tabindex="0" aria-controls="example"
+                                            rowspan="1" colspan="1" style="width: 33px;">Tratamento
+                                        </th>
+
+                                        <th class="dt-body-right sorting dtr-hidden" tabindex="0"
+                                            aria-controls="example" rowspan="1" colspan="1" style="width: 20px;">
+                                            Pagamento
+                                        </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd">
+                                        <td>Hyago</td>
+                                        <td>10</td>
+                                        <td>R$ 150,00</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Alan</td>
+                                        <td>7</td>
+                                        <td>R$ 350,00</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>Livia</td>
+                                        <td>4</td>
+                                        <td>R$ 400,00</td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td>Ashaphe</td>
+                                        <td>6</td>
+                                        <td>R$ 70,00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th rowspan="1" colspan="1">Name</th>
+                                        <th rowspan="1" colspan="1">Tratamento</th>
+                                        <th rowspan="1" colspan="1">Pagamento</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim da tabela-->
+                <button id="btnGerarPDF" class="btn btn-primary m-lg-5 align-bottom " onclick="exportarParaPDF()">Gerar
+                    PDF</button>
+            </div>
+            
+            <!-- Incluindo o JS do Bootstrap -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+            <!-- Incluindo o script para exportar para PDF -->
+            <script>
+                function exportarParaPDF() {
+                    // Cria um novo objeto jsPDF
+                    var doc = new jsPDF();
+                    // Seleciona a seção do conteúdo que será exportada para PDF
+                    var conteudo = document.getElementById('conteudoPDF');
+                    var conteudo1 = document.getElementById('conteudoPDF1');
+                    // Converte a seção em uma imagem com html2canvas
+                    html2canvas(conteudo).then(function (canvas) {
+                        // Adiciona a imagem ao PDF
+                        var imgData = canvas.toDataURL('image/png');
+
+                        doc.addImage(imgData, 'PNG', 0, 0);
+
+                        // Salva o arquivo PDF
+                        doc.save('conteudo.pdf');
+                    });
+                    var doc1 = new jsPDF();
+                    // Converte a seção em uma imagem com html2canvas
+                    html2canvas(conteudo1).then(function (canvas1) {
+                        // Adiciona a imagem ao PDF
+                        var imgData1 = canvas1.toDataURL('image/png');
+
+                        doc1.addImage(imgData1, 'PNG', 0, 0);
+
+                        // Salva o arquivo PDF
+                        doc1.save('conteudo1.pdf');
+                    });
+                }
+            </script>
+            <!-- Script JS para carregar dados e renderizar gráfico -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <!-- Incluindo o JS do Bootstrap -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+            <script src="/src/js/relatorio.js"></script>
+        </div>
+        <script src="/src/js/navbar.js"></script>
+</body>
+
+</html>

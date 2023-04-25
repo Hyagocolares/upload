@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #61b15a;
+    background-image: linear-gradient(to bottom, #61b15a, #d0e684, #f6ee78, #f29d55);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .img {
+    text-align: center;
+    margin-right: 30px;
+  }
+  
+  .img img {
+    width: 80%;
+    max-width: 350px;
+  }
+  
+  .login-container {
+    width: 400px;
+    background-color: #5ebdb0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  form h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(199, 229, 240, 0.884);
+    color: #333;
+    box-shadow: 0px 1px 2px #333;
+  }
+  
+  form input:focus {
+    outline: none;
+    background-color: #fff;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #61b15a;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #498c42;
+  }
+  
+  form p {
+    color: #fff;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  form a {
+    color: #0517b8c0;
+  }
+
+  #signup-form {
+    display: none;
+  }
+
+/* Media queries para dispositivos móveis */
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .login-container {
+    border-radius: 0;
+  }
+  form input,
+  form button {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .img img {
+    width: 60%;
+    max-width: 200px;
+  }
+  .login-container {
+    width: 80%;
+  }
+}

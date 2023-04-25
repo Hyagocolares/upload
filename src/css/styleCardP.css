@@ -1,0 +1,93 @@
+/* Card serviços*/
+
+.container{
+    display: flex;
+}
+
+.card {
+    text-align: center;
+    display: inline-block;
+    max-width: 300px;
+    min-width: 200px;
+    max-height: 400px; /* adicione uma altura máxima */
+    padding: 15px;
+    margin: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h2 {
+    margin: 10px;
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #626262;
+    margin-bottom: 0;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 767px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+      max-width: 100%;
+      min-width: auto;
+      margin: 10px 0;
+    }
+  
+    .card h2 {
+      font-size: 20px;
+      margin: 10px;
+    }
+  
+    .card p {
+      font-size: 14px;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+  }
+
+  /* Estilos para dispositivos móveis */
+@media screen and (max-width: 967px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+      max-width: 100%;
+      min-width: auto;
+      margin: 10px 0;
+    }
+  
+    .card h2 {
+      font-size: 20px;
+      margin: 10px;
+    }
+  
+    .card p {
+      font-size: 14px;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+  }
+  /* Efeitos de hover para dispositivos móveis com tela sensível ao toque */
+@media (hover: none) and (pointer: coarse) {
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .card {
+        touch-action: manipulation;
+    }
+}
